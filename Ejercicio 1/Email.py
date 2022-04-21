@@ -9,9 +9,15 @@ class Email:
         self.__dominio = dom
         self.__tipo_de_dominio = tdd
         self.__contra = con
+    
+    def __str__(self):
+        return "%s@%s.%s" % (self.__idCuenta, self.__dominio, self.__tipo_de_dominio)    
         
     def retornaEmail(self):
         return (f'{self.__idCuenta}@{self.__dominio}.{self.__tipo_de_dominio}')
+
+    def getID(self):
+        return self.__idCuenta
 
     def getDominio(self):
         return self.__dominio
